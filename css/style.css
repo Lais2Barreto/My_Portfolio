@@ -25,6 +25,7 @@ a {
   -webkit-transition: .5s ease;
   transition: .5s ease;
   position: relative;
+  display: inline-block;
 }
 
 .link::after {
@@ -792,16 +793,6 @@ body {
           align-items: center;
 }
 
-.lf-lg-line1 {
-  -webkit-transform: translateY(-120px);
-          transform: translateY(-120px);
-}
-
-.rg-lg-line2 {
-  -webkit-transform: translateY(-120px);
-          transform: translateY(-120px);
-}
-
 .flex-end {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -916,7 +907,7 @@ body {
   opacity: 1;
 }
 
-.bg-transition {
+.bg-color-transition {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(123, 107, 250, 0.05)), color-stop(90%, #050607));
   background-image: linear-gradient(rgba(123, 107, 250, 0.05) 10%, #050607 90%);
 }
@@ -944,6 +935,8 @@ body {
 
 .get-touch {
   height: 40vh;
+  margin: 0 auto;
+  padding: 16px 24px;
 }
 
 @media screen and (min-width: 961px) and (max-width: 1419px) {
@@ -1018,6 +1011,16 @@ body {
   }
 }
 
+.lf-lg-line1 {
+  -webkit-animation: moveLargeLines 2s infinite;
+          animation: moveLargeLines 2s infinite;
+}
+
+.rg-lg-line2 {
+  -webkit-animation: moveLargeLines 2s infinite;
+          animation: moveLargeLines 2s infinite;
+}
+
 @-webkit-keyframes moveMed1Lines {
   from {
     -webkit-transform: translateY(-150px);
@@ -1038,6 +1041,16 @@ body {
     -webkit-transform: translateY(-80px);
             transform: translateY(-80px);
   }
+}
+
+.lf-med-line1 {
+  -webkit-animation: moveMed1Lines 2s infinite;
+          animation: moveMed1Lines 2s infinite;
+}
+
+.rg-med-line2 {
+  -webkit-animation: moveMed1Lines 2s infinite;
+          animation: moveMed1Lines 2s infinite;
 }
 
 @-webkit-keyframes moveMed2Lines {
@@ -1062,6 +1075,16 @@ body {
   }
 }
 
+.lf-med2-line1 {
+  -webkit-animation: moveMed2Lines 2s infinite;
+          animation: moveMed2Lines 2s infinite;
+}
+
+.rg-med2-line2 {
+  -webkit-animation: moveMed2Lines 2s infinite;
+          animation: moveMed2Lines 2s infinite;
+}
+
 @-webkit-keyframes moveLitLines {
   from {
     -webkit-transform: translateY(-80px);
@@ -1084,36 +1107,6 @@ body {
   }
 }
 
-.lf-lg-line1 {
-  -webkit-animation: moveLargeLines 2s infinite;
-          animation: moveLargeLines 2s infinite;
-}
-
-.rg-lg-line2 {
-  -webkit-animation: moveLargeLines 2s infinite;
-          animation: moveLargeLines 2s infinite;
-}
-
-.lf-med-line1 {
-  -webkit-animation: moveMed1Lines 2s infinite;
-          animation: moveMed1Lines 2s infinite;
-}
-
-.rg-med-line2 {
-  -webkit-animation: moveMed1Lines 2s infinite;
-          animation: moveMed1Lines 2s infinite;
-}
-
-.lf-med2-line1 {
-  -webkit-animation: moveMed2Lines 2s infinite;
-          animation: moveMed2Lines 2s infinite;
-}
-
-.rg-med2-line2 {
-  -webkit-animation: moveMed2Lines 2s infinite;
-          animation: moveMed2Lines 2s infinite;
-}
-
 .lf-lt-line1 {
   -webkit-animation: moveLitLines 2s infinite;
           animation: moveLitLines 2s infinite;
@@ -1130,8 +1123,8 @@ body {
             transform: translate(-5%, -22%) rotate(0deg);
   }
   to {
-    -webkit-transform: translate(-5%, -22%) rotate(360deg);
-            transform: translate(-5%, -22%) rotate(360deg);
+    -webkit-transform: translate(-5%, -22%) rotate(45deg);
+            transform: translate(-5%, -22%) rotate(45deg);
   }
 }
 
@@ -1141,13 +1134,14 @@ body {
             transform: translate(-5%, -22%) rotate(0deg);
   }
   to {
-    -webkit-transform: translate(-5%, -22%) rotate(360deg);
-            transform: translate(-5%, -22%) rotate(360deg);
+    -webkit-transform: translate(-5%, -22%) rotate(45deg);
+            transform: translate(-5%, -22%) rotate(45deg);
   }
 }
 
 .square::after {
-  -webkit-animation: squareRot 2s;
-          animation: squareRot 2s;
+  -webkit-animation: squareRot 2s ease;
+          animation: squareRot 2s ease;
+  /*  infinite alternate */
 }
 /*# sourceMappingURL=style.css.map */
