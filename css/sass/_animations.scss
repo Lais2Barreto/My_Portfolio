@@ -76,6 +76,8 @@
   animation: moveLitLines 2s infinite;
 }
 
+// SQUARE WORKS
+
 @keyframes squareRot {
   from {
     transform: translate(-5%, -22%) rotate(0deg);
@@ -91,3 +93,4 @@
     animation: squareRot 2s;
   }  
 }
+

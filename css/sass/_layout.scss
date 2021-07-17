@@ -26,16 +26,6 @@
   align-items: center;
 }
 
-
-// BACKGROUND HERO LINES
-
-.lf-lg-line1 {
-  transform: translateY(-120px);
-}
-.rg-lg-line2 {
-  transform: translateY(-120px);
-}
-
 // CONTAINER
 
 .flex-end {
@@ -154,7 +144,8 @@
 .get-touch {
   height: 40vh;
 
-  
+  margin: 0 auto;
+  padding: 16px 24px;
 }
 
 // RESPONSIVIDADE

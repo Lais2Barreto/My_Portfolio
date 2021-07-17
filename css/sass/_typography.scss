@@ -15,6 +15,7 @@ a {
   transition: .5s ease;
 
   position: relative;
+  display: inline-block;
 
   &::after {      //outras divs que estão depois do elemento
     content: ''; //caixa vazia para sublinhado
