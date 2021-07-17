@@ -72,9 +72,15 @@
   <!-- CONTAINER -->
   <section class="container hero">
     <div class="container-item">
-      <h1>Laís Barreto</h1>
-      <h2 class="mask text-right mt-7">Creative Developer</h2>
-      <h2 class="mask">Visual Design</h2>
+      <div>
+        <h1>Laís Barreto</h1>
+      </div>  
+      <div>
+        <h2 class="mask text-right mt-7">Creative Developer</h2>
+      </div>
+      <div>
+        <h2 class="mask">Visual Design</h2>
+      </div>
       <div class="flex-end pr-9">
         <a href="" class="square">Works</a>
       </div>
@@ -86,7 +92,7 @@
 
   <!-- SELECTED WORKS -->
 
-  <section class="list bg-transition">
+  <section class="list bg-color-transition" id="section01">
     <div class="selected-works">
       <h2>Selected Works</h2>
     </div>
@@ -108,53 +114,14 @@
       <div class="bb-gray"></div>
     </div>  
   </section>
-  <section class="get-touch column-center mt-5">
+  <section class="get-touch column-center mt-5" id="section02">
     <h2>Get in touch</h2>
     <h3 class="mt-7 mask column-center">lais2barreto@gmail.com</h3>
   </section>
   <!-- Using GSAP (Js Lib for Animation) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" integrity="sha512-DlTk2PLUinhBupE89kHOJTt11QqbRMQVlbb26XVDvp4D1kt0fRvQJslvZnTelRJHq6yK0tIPCR7cul8+9Blz0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <script>
-    //qnd a arvore de elementos estiver carregada, ai sim dispara as animações; arrow function pq é evento de callback 
-    // ou seja, essa outra função é executada qnd a função addEventListener tiver executado o DOMContentLoaded (pagina carregada)
-    document.addEventListener('DOMContentLoaded', () => {
-      let tl = gsap.timeline();        //instancio ela com esse nome; estou passando os detalhes da timeline (ordem de animação dos eventos na pagina) para a variavel
-      //concatenar os elementos q qr 
-      tl
-      .from(".menu-1", {
-        duration: 1,
-        y: 50,    //elementos carregados de baixo pra cima
-        opacity: 0,
-        /* delay: .5 */
-        ease: "power3.out",
-      })
-      .from(".menu-2", {
-        duration: 1,
-        opacity: 0,
-        ease: "power3.out",
-      }, "-=0.8") //adiantar os demais em 0.8s; para adiar mais pro começo da timeline, coloca -= e o tempo
-      .from(".menu-3", {
-        duration: 1,
-        y: 50,
-        opacity: 0,
-        ease: "power3.out",
-      }, "-=0.8") //coloca nos outros tb
-      .from(".menu-4", {
-        duration: 1,
-        y: 50,
-        opacity: 0,
-        ease: "power3.out",
-      }, "-=0.8")
-      .from(".menu-5", {
-        duration: 1,
-        y: 50,
-        opacity: 0,
-        ease: "power3.out",
-      }, "-=0.8")
-    }) 
-  </script>
+  <script src="js/animations.js"></script>
 
 </body>
 </html>
