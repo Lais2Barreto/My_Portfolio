@@ -1,0 +1,93 @@
+// BACKGROUND HERO LINES
+
+@keyframes moveLargeLines {
+  from {
+    transform: translateY(-180px);
+  }
+  to {
+    transform: translateY(-120px);
+  }
+}
+
+@keyframes moveMed1Lines {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes moveMed2Lines {
+  from {
+    transform: translateY(-120px);
+  }
+  to {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes moveLitLines {
+  from {
+    transform: translateY(-80px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+// BACKGROUND LINES FROM SVG
+
+// lf : left always line1
+//rg : right always line 2
+
+// LARGE LINES
+.lf-lg-line1 {
+  animation: moveLargeLines 2s infinite;
+}
+.rg-lg-line2 {
+  animation: moveLargeLines 2s infinite;
+}
+
+//MEDIUM 1 LINES
+.lf-med-line1 {
+  animation: moveMed1Lines 2s infinite;
+}
+
+.rg-med-line2 {
+  animation: moveMed1Lines 2s infinite;
+}
+
+//MEDIUM 2 LINES
+.lf-med2-line1 {
+  animation: moveMed2Lines 2s infinite;
+}
+
+.rg-med2-line2 {
+  animation: moveMed2Lines 2s infinite;
+}
+
+// LITTLE LINES
+.lf-lt-line1 {
+  animation: moveLitLines 2s infinite;
+}
+
+.rg-lt-line2 {
+  animation: moveLitLines 2s infinite;
+}
+
+@keyframes squareRot {
+  from {
+    transform: translate(-5%, -22%) rotate(0deg);
+  }
+  to {
+    transform: translate(-5%, -22%) rotate(360deg);
+  }
+}
+
+.square {
+
+  &::after {
+    animation: squareRot 2s;
+  }  
+}
